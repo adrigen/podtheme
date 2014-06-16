@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+.page-id-55 section.page-content {
+  margin-top: 4em;
+}
+@media screen and (min-width: 912px) {
+  .page-id-55 section.page-content {
+    float: left;
+    display: block;
+    margin-right: 2.7027%;
+    width: 58.91892%;
+  }
+  .page-id-55 section.page-content:last-child {
+    margin-right: 0;
+  }
+}
 .page-id-55 .post-title {
   display: none;
 }

@@ -21,7 +21,7 @@ body .site .feature-image-for-page {
 }
 body .subsite-header {
   display: block;
-  margin-top: 2em;
+  position: relative;
 }
 body .post-title {
   border-color: #008b82;
@@ -51,7 +51,7 @@ body #sub-nav ul.sub-menu li {
 
 .feature-image-for-page {
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: -1;
   min-height: 100%;
@@ -63,6 +63,8 @@ body #sub-nav ul.sub-menu li {
 .page-logo {
   float: right;
   margin-bottom: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=tina.css.map */

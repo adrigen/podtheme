@@ -37,8 +37,7 @@ function is_tree($pid)
 	  global $post;
 
 	    $ancestors = get_post_ancestors($post->$pid);
-	    $root = count($ancestors) - 1;
-	      $parent = $ancestors[$root];
+
 
 	      if(is_page() && (is_page($pid) || $post->post_parent == $pid || in_array($pid, $ancestors)))
 		        {

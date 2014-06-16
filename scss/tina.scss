@@ -25,7 +25,7 @@ body {
 
 .subsite-header {
 	display:block;
-	margin-top: 2em;
+	position:relative;
 }
 .post-title {
 	    border-color: $tina-links;
@@ -59,7 +59,7 @@ h1, a {
 
 .feature-image-for-page {
 	left: 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	z-index: -1;
         min-height: 100%;
@@ -71,5 +71,7 @@ h1, a {
 .page-logo {
 	float:right;
 	margin-bottom: 1em;
+	margin-top:1em;
+	margin-right:1em;
 }
 

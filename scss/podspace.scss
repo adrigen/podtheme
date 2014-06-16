@@ -7,6 +7,10 @@
 $podspace-links: black;
 .page-id-55 {
 	section.page-content {
+		margin-top:4em;
+		@include media($large){
+	       		 @include span-columns(6 of 10);	
+		 }
 	}
 	@include media($large){
 		div.subsite-header {
