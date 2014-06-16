@@ -7,7 +7,28 @@
 .page-id-55 .post-title {
   display: none;
 }
+.page-id-55 .site .feature-image-for-page.podspace {
+  left: 0;
+  top: 0;
+  z-index: 0;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  margin-top: 2em;
+}
+.page-id-55 section {
+  background: black;
+  padding: 1em;
+}
+.page-id-55 section p, .page-id-55 section .post-meta, .page-id-55 section a, .page-id-55 section .breadcrumb {
+  color: white !important;
+}
 
+body .site {
+  position: relative;
+}
 body .site .feature-image-for-page {
   display: none;
 }
@@ -50,17 +71,6 @@ body #sub-nav ul.sub-menu li {
 
 #sub-nav li.menu-item-has-children:hover ul.sub-menu {
   display: block;
-}
-
-.feature-image-for-page {
-  left: 0;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  min-height: 100%;
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
 }
 
 .page-logo {

@@ -27,6 +27,10 @@ if ( is_page('tina')) {
 /******************************************************************************\
 	Theme support, standard settings, menus and widgets
 \******************************************************************************/
+add_filter( 'use_default_gallery_style', '__return_false' );
+update_option('thumbnail_size_w', 290);
+update_option('thumbnail_size_h', 290);
+update_option('thumbnail_crop', 1);
 //test if were on a page or it's grandchildren
 function is_tree($pid)
 {

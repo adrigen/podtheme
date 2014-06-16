@@ -15,12 +15,35 @@ $podspace-links: black;
 	.post-title {
 		display:none;
 	}
+	.site .feature-image-for-page.podspace {
+	left: 0;
+	top: 0;
+	z-index: 0;
+        //min-height: 100%;
+	    	
+	      /* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+	display:block;
+	position:absolute;
+	margin-top:2em;
+	}
+	section,  { 
+		background:black;
+		padding:1em;
+		p, .post-meta, a, .breadcrumb {
+			color:white!important;
+		}
+	}
+
 
 	}
 body {
 .site {
+	position:relative;
 	.feature-image-for-page {
 		display: none;
+
 	}
 	.page-content a {
 		text-decoration:underline;
@@ -63,17 +86,6 @@ h1, .page-content a, .subsite-header a {
 	display: block;
 }
 
-.feature-image-for-page {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: -1;
-        min-height: 100%;
-	    	
-	      /* Set up proportionate scaling */
-	width: 100%;
-	height: auto;
-}
 .page-logo {
 	margin-bottom: 1em;
 	@include shift(1);

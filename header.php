@@ -85,8 +85,6 @@ wp_nav_menu( $defaults );
 <?php
 } else if ( is_tree(55)){ //is it podspace or grandchild?
 ?>
-                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-                <img class="feature-image-for-page" src="<?php echo $image[0]; ?>" alt="" />
 
 <img class="page-logo" src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/podspace-logo.gif" alt="PODspace" /> 
             	<div id="sub-nav">
@@ -108,3 +106,11 @@ wp_nav_menu( $defaults );
 </div><!--end subsite-header-->
 <div class="site">
 
+<?php
+
+if ( is_tree(55)) { //is it podspace or grandchild?
+	
+?>
+                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+                <img class="podspace feature-image-for-page" src="<?php echo $image[0]; ?>" alt="" />
+<?php } ?>

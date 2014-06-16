@@ -196,3 +196,21 @@ section.page-content {
 		&:hover { border-bottom: 2px solid #fff; }
 	}
 }
+
+
+//images 
+img.size-medium {
+	@include span-columns(4 of 10);
+	margin-right:$gutter !important; 
+}
+div.gallery {
+	@include span-columns(8 of 10);
+	@include shift(1);
+}
+.gallery-caption {
+	background-color:white !important;
+}
+.gallery-item {
+	@include span-columns(4 of 8);
+	@include omega(2n);
+}

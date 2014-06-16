@@ -48,7 +48,7 @@ h1 a {
 	color: $color3;
 }
 a.button {
-	@include button(pill, $color3);
+	@extend input[type="submit"];
 } 
 img {
 	max-width: 100%;
