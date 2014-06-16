@@ -1,0 +1,97 @@
+/*! 
+	Theme Name: podtheme
+	Author: Adrian Garner
+	Version: 1.0
+	Author URI: http://adrian.com.au
+	Theme URI: http://adrian.com.au/podtheme
+	Tags: light,responsive-layout
+	Description: This is a description for the podtheme theme.
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import "vendor/normalize";
+@import "vendor/bourbon/bourbon";
+@import 'base/grid-settings';
+@import "vendor/neat/neat";
+@import "base/base";
+@import "components";
+@import "wp-base";
+@import "header";
+@import "navigation";
+@import "content";
+@import "post-formats";
+@import "footer";
+
+// default styling
+body {
+	//background: $color3;
+	color: $color2;
+	background-image: url('/wp-content/themes/podtheme/images/body-bg-octapod.gif');
+	
+}
+
+body.custom-background {
+	background-position: center;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+a {
+	color: $color3;
+	text-decoration: none;
+}
+
+h1 a {
+	color: $color3;
+}
+a.button {
+	@include button(pill, $color3);
+} 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.site {
+	overflow: hidden;
+	//background: rgba($color1,;
+	@include outer-container;
+	@include media($large) {
+		width: $max-width;
+	}
+	background-color:white;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+.error{
+	@extend %flash-error;
+}
+.success {
+	@extend %flash-success;
+}
+
+.notice {
+	@extend %flash-notice;
+}
+.page-content ul li {
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: inherit;
+        background-image: url("images/bullet.png");
+	background-origin: padding-box;
+	background-position: 0;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+        padding: 0 0 0px 17px;
+						}

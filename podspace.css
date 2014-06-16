@@ -1,0 +1,71 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-id-55 .post-title {
+  display: none;
+}
+
+body .site .feature-image-for-page {
+  display: none;
+}
+body .site .page-content a {
+  text-decoration: underline;
+}
+body .subsite-header {
+  display: block;
+  padding-top: 2em;
+  background-color: #FFFFFF;
+}
+body .post-title {
+  border: none;
+}
+body h1, body .page-content a, body .subsite-header a {
+  color: black;
+}
+body #sub-nav {
+  float: left;
+  display: block;
+  margin-right: 2.24215%;
+  width: 82.95964%;
+  margin-left: 8.52018%;
+  border-bottom: 4px solid black;
+  padding-bottom: 1em;
+}
+body #sub-nav:last-child {
+  margin-right: 0;
+}
+body #sub-nav li {
+  margin-right: 1em;
+  display: inline;
+}
+body #sub-nav ul.sub-menu {
+  display: none;
+}
+body #sub-nav ul.sub-menu li {
+  margin-left: 1em;
+}
+
+#sub-nav li.menu-item-has-children:hover ul.sub-menu {
+  display: block;
+}
+
+.feature-image-for-page {
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  min-height: 100%;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+}
+
+.page-logo {
+  margin-bottom: 1em;
+  margin-left: 8.52018%;
+}
+
+/*# sourceMappingURL=podspace.css.map */

@@ -1,0 +1,81 @@
+//what?
+
+@import "vendor/bourbon/bourbon";
+@import 'base/grid-settings';
+@import "vendor/neat/neat";
+
+$podspace-links: black;
+.page-id-55 {
+	section.page-content {
+	}
+	@include media($large){
+		div.subsite-header {
+                }
+	}
+	.post-title {
+		display:none;
+	}
+
+	}
+body {
+.site {
+	.feature-image-for-page {
+		display: none;
+	}
+	.page-content a {
+		text-decoration:underline;
+	}
+}
+
+.subsite-header {
+	display:block;
+	padding-top: 2em;
+	background-color: #FFFFFF;
+}
+.post-title {
+	    border: none;
+    }
+h1, .page-content a, .subsite-header a {
+	color:$podspace-links;
+}
+#sub-nav {
+	@include span-columns(10);
+	@include shift(1);	
+	border-bottom:4px solid black;
+	padding-bottom:1em;
+	a {
+	}
+	li {
+		//margin: 1em 0;
+		margin-right:1em;
+		display:inline;
+	}
+	ul.sub-menu {
+		display:none;
+		li {
+			margin-left:1em;
+		}
+	}
+
+}
+}
+#sub-nav li.menu-item-has-children:hover ul.sub-menu {
+	display: block;
+}
+
+.feature-image-for-page {
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: -1;
+        min-height: 100%;
+	    	
+	      /* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+}
+.page-logo {
+	margin-bottom: 1em;
+	@include shift(1);
+}
+

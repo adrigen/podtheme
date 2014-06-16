@@ -1,0 +1,11 @@
+@import "vendor/bourbon/bourbon";
+@import "base/grid-settings";
+@import "base/base";
+@import "base/typography";
+
+$content-width: 650px;
+
+html .mceContentBody {
+	font-size: 100%;
+	max-width: $content-width;
+}

@@ -1,0 +1,58 @@
+// variables
+$color1: #222; //almost black
+$color2: black;
+$color3: #F7403A; //red
+
+// default styling
+body {
+	//background: $color3;
+	color: $color2;
+	background-image: url('/wp-content/themes/podtheme/images/body-bg-octapod.gif');
+	
+}
+
+body.custom-background {
+	background-position: center;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+a {
+	color: $color3;
+	text-decoration: none;
+}
+
+h1 a {
+	color: $color3;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input, textarea {
+	border: 1px solid $color1;
+	background: white;
+	padding: 0.3em 0.4em;
+	box-shadow: inset -1px -1px 6px $color1;
+}
+
+.site {
+	overflow: hidden;
+        background: white;
+	@include outer-container;
+	width: $max-width;
+	background-color:white;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}

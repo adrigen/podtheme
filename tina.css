@@ -1,0 +1,68 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-id-170 section.page-content {
+  display: none;
+}
+@media screen and (min-width: 912px) {
+  .page-id-170 div.subsite-header {
+    min-height: 35em;
+  }
+}
+
+body .site {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+body .site .feature-image-for-page {
+  display: none;
+}
+body .subsite-header {
+  display: block;
+  margin-top: 2em;
+}
+body .post-title {
+  border-color: #008b82;
+}
+body h1, body a {
+  color: #008b82;
+}
+body #sub-nav a {
+  padding: .5em .7em;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+body #sub-nav li {
+  margin: 1em 0;
+}
+body #sub-nav ul.sub-menu {
+  display: none;
+}
+body #sub-nav ul.sub-menu li {
+  margin-left: 1em;
+}
+
+#sub-nav li.menu-item-has-children:hover ul.sub-menu {
+  display: block;
+}
+
+.feature-image-for-page {
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  min-height: 100%;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+}
+
+.page-logo {
+  float: right;
+  margin-bottom: 1em;
+}
+
+/*# sourceMappingURL=tina.css.map */
