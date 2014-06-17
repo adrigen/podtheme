@@ -1800,7 +1800,7 @@ img {
   background-color: inherit;
   background-image: url("images/bullet.png");
   background-origin: padding-box;
-  background-position: 0;
+  background-position: 0 .5em;
   background-repeat: no-repeat;
   background-size: auto auto;
   padding: 0 0 0px 17px;

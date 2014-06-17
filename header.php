@@ -168,7 +168,7 @@ wp_nav_menu( $defaults );
 } else if ( is_tree(55)){ //is it podspace or grandchild?
 ?>
 
-<img class="page-logo" src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/podspace-logo.gif" alt="PODspace" /> 
+<a href="podspace/"><img class="page-logo" src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/podspace-logo.gif" alt="PODspace" /</a>
             	<div id="sub-nav">
                 	
 <?php
