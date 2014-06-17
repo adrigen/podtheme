@@ -891,6 +891,30 @@ a.button {
   clear: both;
 }
 
+#ticker {
+  background: none repeat scroll 0 0 #000000;
+  border-radius: 10px;
+  margin: 3px 10px 10px 10px;
+  text-transform: uppercase;
+  width: auto;
+  height: 2em;
+}
+#ticker .slide {
+  width: 100%;
+  margin: 5px 11px;
+}
+
+.slider {
+  *zoom: 1;
+}
+.slider:before, .slider:after {
+  content: " ";
+  display: table;
+}
+.slider:after {
+  clear: both;
+}
+
 .main-menu {
   padding-top: 6px;
 }
@@ -1229,15 +1253,7 @@ article:after {
 }
 
 .archive-title, .search-title h1 {
-  font-size: 1.3em;
-  font-size: 1.3rem;
-  font-weight: normal;
-  background: black;
-  text-align: center;
-  color: #222222;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.6em 0;
+  margin-bottom: 1em !important;
 }
 
 .archive-description, .second-search {
@@ -1265,16 +1281,16 @@ article:after {
 /******************************************************************************\
 	Standard-page
 \******************************************************************************/
-.post-title {
+.post-title, .archive-title, .search-title h1 {
   border-bottom: 0.1em solid #f7403a;
   text-align: left;
   margin-bottom: 0.2em;
 }
-.post-title:first-child {
+.post-title:first-child, .archive-title:first-child, .search-title h1:first-child {
   margin-top: 1em;
 }
 
-.single .post-title:first-child {
+.single .post-title:first-child, .single .archive-title:first-child, .single .search-title h1:first-child, .search-title .single h1:first-child {
   margin-top: 1em;
 }
 
@@ -1373,6 +1389,12 @@ section.page-content:after {
   margin: 1em 0 0 0;
   padding: 0.6em 0;
   background: #222222;
+}
+.pagination ul.page-numbers {
+  background-color: transparent;
+}
+.pagination ul.page-numbers li {
+  background-image: none;
 }
 .pagination li {
   display: inline;
@@ -1514,6 +1536,29 @@ div.gallery:last-child {
   clear: left;
 }
 
+article.post {
+  float: left;
+  display: block;
+  margin-right: 2.7027%;
+  width: 58.91892%;
+  margin-left: 30.81081%;
+  margin-bottom: 2em;
+}
+article.post:last-child {
+  margin-right: 0;
+}
+article.post img.attachment-thumbnail {
+  float: left;
+  display: block;
+  margin-right: 4.58716%;
+  width: 30.27523%;
+  margin-right: 0;
+  margin-left: -35%;
+}
+article.post img.attachment-thumbnail:last-child {
+  margin-right: 0;
+}
+
 .format-status .date, .format-link .date, .format-quote .date {
   width: 100%;
   padding: 5px 0 0;
@@ -1531,15 +1576,15 @@ div.gallery:last-child {
   border-color: #f7403a;
 }
 
-.format-status .post-title {
+.format-status .post-title, .format-status .archive-title, .format-status .search-title h1, .search-title .format-status h1 {
   font-style: italic;
 }
 
-.format-link .post-title {
+.format-link .post-title, .format-link .archive-title, .format-link .search-title h1, .search-title .format-link h1 {
   font-style: italic;
 }
 
-.format-quote .post-title {
+.format-quote .post-title, .format-quote .archive-title, .format-quote .search-title h1, .search-title .format-quote h1 {
   font-style: italic;
 }
 
@@ -1737,6 +1782,21 @@ img {
   background-repeat: no-repeat;
   background-size: auto auto;
   padding: 0 0 0px 17px;
+}
+
+div.home-box {
+  *zoom: 1;
+  max-width: 912px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #C6C5C5;
+}
+div.home-box:before, div.home-box:after {
+  content: " ";
+  display: table;
+}
+div.home-box:after {
+  clear: both;
 }
 
 /*# sourceMappingURL=style.css.map */

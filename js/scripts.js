@@ -1,5 +1,18 @@
 (function($) {
 $(document).ready(function() {
+//top banner
+  $('.flexslider').flexslider();
+
+//ticker
+$(function() {
+	 $('#ticker') 
+  .cycle({ 
+   fx:     'scrollDown', 
+   speed:   900, 
+   timeout: 200
+  });
+});
+
   var menu = $('ul.menu');
   var menuToggle = $('#js-mobile-menu');
   var signUp = $('.sign-up');
@@ -15,6 +28,8 @@ $(document).ready(function() {
       }
     });
   });
+
+
 
   // underline under the active nav item
   $(".nav .nav-link").click(function() {

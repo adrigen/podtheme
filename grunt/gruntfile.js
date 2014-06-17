@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'../js/scripts.min.js': [
-						'../js/scripts.js'
+						'../js/scripts.js', '../js/jquery.flexslider.js', '../js/jquery.cycle.all.js'
 					]
 				}
 			}

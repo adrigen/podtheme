@@ -58,6 +58,53 @@ $nav_menu = wp_nav_menu(
     </div>-->
   </div>
 </header>
+
+<!-- banner start -->
+
+		<?php if(is_front_page()){ ?>
+<div class="home-box">
+	<div class="slider">
+        	<div class="flexslider">
+          		<ul class="slides">
+		  <?php $args = array(
+	'posts_per_page'   => 5,
+	'category'		   => 22,
+	'orderby'          => 'post_date',
+	'order'            => 'DESC',
+	'post_type'        => 'slider',
+	'post_status'      => 'publish',
+	'suppress_filters' => true ); ?>
+	<?php $myposts = get_posts( $args ); 
+	$key = 'link';
+	?>
+	
+			<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                    		<li><a href="<?php echo get_post_meta($post->ID, $key, true); ?>" title=""><img src="<?php echo $image[0]; ?>" alt="" /></a></li>
+	
+			<?php endforeach;  wp_reset_postdata();?>
+         
+          		</ul>
+        	</div>
+        </div>
+
+
+        <div id="ticker">                 
+                	<?php $args = array(
+	'posts_per_page'   => 3,
+	'orderby'          => 'post_date',
+	'order'            => 'DSC',
+	'post_status'      => 'publish',
+	'suppress_filters' => true ); ?>
+	<?php $myposts = get_posts( $args ); ?> 
+	<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+ 					<div class="slide"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>	
+	<?php endforeach;  wp_reset_postdata();?>
+	</div>
+</div>
+		<?php } ?>
+
+
 <div class="subsite-header">
 <?php
 

@@ -28,6 +28,10 @@ if ( is_page('tina')) {
 	Theme support, standard settings, menus and widgets
 \******************************************************************************/
 add_filter( 'use_default_gallery_style', '__return_false' );
+if ( function_exists( 'add_theme_support' ) ) {
+		add_theme_support( 'post-thumbnails' );
+		        set_post_thumbnail_size( 135, 135, true );
+}
 update_option('thumbnail_size_w', 290);
 update_option('thumbnail_size_h', 290);
 update_option('thumbnail_crop', 1);

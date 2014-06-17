@@ -95,3 +95,9 @@ img {
 	background-size: auto auto;
         padding: 0 0 0px 17px;
 						}
+
+//home only
+div.home-box {
+	@include outer-container;
+	background-color:#C6C5C5;
+}	
