@@ -7,7 +7,7 @@
  * @since podtheme 1.0
  */
 ?>
-
+<?php if(!is_front_page()){ ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php //$pageid = get_the_ID(); echo get_the_post_thumbnail($pageid, 'thumbnail'); ?>
 	<h1 class="post-title"><?php
@@ -57,3 +57,4 @@
 	</div>
 
 </article>
+		<?php } ?>

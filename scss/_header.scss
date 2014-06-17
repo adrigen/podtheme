@@ -53,4 +53,10 @@
 .slider {
 	@include clearfix;
 }
-
+div.hotlinks {
+	@include clearfix;
+	margin-bottom:3px;
+}
+.hotlink-single {
+	@include span-columns(4 of 12);
+}

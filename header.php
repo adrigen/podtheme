@@ -101,6 +101,41 @@ $nav_menu = wp_nav_menu(
  					<div class="slide"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>	
 	<?php endforeach;  wp_reset_postdata();?>
 	</div>
+
+
+
+<div class="hotlinks">
+						<?php $args = array(
+	'posts_per_page'   => 5,
+	'category'		   => 21,
+	'orderby'          => 'post_date',
+	'order'            => 'DESC',
+	'post_type'        => 'slider',
+	'post_status'      => 'publish',
+	'suppress_filters' => true ); ?>
+	<?php $myposts = get_posts( $args ); ?>
+ 
+
+
+
+	
+			<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+ 
+	<div class="hotlink-single"><a href="<?php  $postid = $post->ID; echo get_post_meta($postid, 'link', true); ?>"><img src="<?php echo $image[0]; ?>" alt="" /></a></div>
+	
+	
+
+	<?php endforeach;  wp_reset_postdata();?>
+
+          				
+
+
+  
+</div>
+
+
+
 </div>
 		<?php } ?>
 

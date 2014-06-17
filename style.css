@@ -915,6 +915,28 @@ a.button {
   clear: both;
 }
 
+div.hotlinks {
+  *zoom: 1;
+  margin-bottom: 3px;
+}
+div.hotlinks:before, div.hotlinks:after {
+  content: " ";
+  display: table;
+}
+div.hotlinks:after {
+  clear: both;
+}
+
+.hotlink-single {
+  float: left;
+  display: block;
+  margin-right: 2.24215%;
+  width: 31.83857%;
+}
+.hotlink-single:last-child {
+  margin-right: 0;
+}
+
 .main-menu {
   padding-top: 6px;
 }
@@ -1536,7 +1558,7 @@ div.gallery:last-child {
   clear: left;
 }
 
-article.post {
+.archive article.post {
   float: left;
   display: block;
   margin-right: 2.7027%;
@@ -1544,10 +1566,10 @@ article.post {
   margin-left: 30.81081%;
   margin-bottom: 2em;
 }
-article.post:last-child {
+.archive article.post:last-child {
   margin-right: 0;
 }
-article.post img.attachment-thumbnail {
+.archive article.post img.attachment-thumbnail {
   float: left;
   display: block;
   margin-right: 4.58716%;
@@ -1555,7 +1577,7 @@ article.post img.attachment-thumbnail {
   margin-right: 0;
   margin-left: -35%;
 }
-article.post img.attachment-thumbnail:last-child {
+.archive article.post img.attachment-thumbnail:last-child {
   margin-right: 0;
 }
 
