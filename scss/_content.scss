@@ -84,6 +84,7 @@ section.page-content {
 .person-profile {
 	@include span-columns(8 of 10);
 	@include shift(1);
+	@include clearfix;
 	br {
 		display:inline;
 		float:left;
@@ -134,7 +135,9 @@ section.page-content {
 	}
 }
 
-
+.page-content form ul li {
+	background-image: none;
+}
 /******************************************************************************\
 	Widgets
 \******************************************************************************/

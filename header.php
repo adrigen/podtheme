@@ -28,7 +28,7 @@
 <header class="navigation">
   <div class="menu-wrapper">
     <a href="http://octapod.org" class="logo">
-      <img src="/wp-content/themes/podtheme/images/logo.png" href="<?php echo home_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" title="">
+      <img src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/logo.png" href="<?php echo home_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" title="">
     </a>
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">

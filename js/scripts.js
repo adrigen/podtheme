@@ -1,4 +1,5 @@
 (function($) {
+
 $(document).ready(function() {
 //top banner
   $('.flexslider').flexslider();
@@ -40,5 +41,12 @@ $(function() {
     $(".nav .more").removeClass("active-nav-item");
   });
 });
-  
+ $("li.product-category").each(function() {
+	 $imgh = ($(this).find('img').height());
+	 $h3 = $(this).find('h3');
+	 $h3h = $h3.height();
+	 $h3.css('top', (($imgh/2)-($h3h/2)));
+ });
+
+
 })(jQuery);

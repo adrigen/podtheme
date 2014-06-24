@@ -144,6 +144,13 @@ if ( function_exists( 'register_sidebars' ) ) {
 			'description' => __( 'Shows in the sites footer', 'podtheme' )
 		)
 	);
+	register_sidebar(
+		array(
+			'id' => 'shop-sidebar',
+			'name' => __( 'Shop widgets', 'podtheme' ),
+			'description' => __( 'Shows in the sites footer', 'podtheme' )
+		)
+	);
 }
 
 if ( ! isset( $content_width ) ) $content_width = 650;
@@ -194,4 +201,31 @@ function podtheme_post_meta() {
 		);
 	}
 	edit_post_link( __( ' (edit)', 'podtheme' ), '<span class="edit-link">', '</span>' );
+
+}
+//woocommerce shop
+//dont use the woo template
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+//set wrapper
+function my_theme_wrapper_start() {
+	  echo '<section id="main" class="page-content primary">';
+}
+
+function my_theme_wrapper_end() {
+	  echo '</section>';
+}
+//css  remove them all in one line
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+//customise the category view
+//remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
+//add_action( 'woocommerce_after_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
+add_action( 'woocommerce_after_subcategory_title', 'my_add_cat_description', 12);
+function my_add_cat_description ($category) {
+	$cat_id=$category->term_id;
+	$prod_term=get_term($cat_id,'product_cat');
+	$description=$prod_term->description;
+	echo '<div class="shop_cat_desc">'.$description.'</div>';
 }

@@ -27,7 +27,7 @@
 body {
 	//background: $color3;
 	color: $color2;
-	background-image: url('/wp-content/themes/podtheme/images/body-bg-octapod.gif');
+	background-image: url('http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/body-bg-octapod.gif');
 	
 }
 
@@ -90,7 +90,7 @@ img {
 	background-color: inherit;
         background-image: url("images/bullet.png");
 	background-origin: padding-box;
-	background-position: 0;
+	background-position: 0 6px;
 	background-repeat: no-repeat;
 	background-size: auto auto;
         padding: 0 0 0px 17px;
@@ -101,3 +101,69 @@ div.home-box {
 	@include outer-container;
 	background-color:#C6C5C5;
 }	
+//shop
+#sidebar {
+	display:none;
+}
+.page-content li.product {
+
+	background-image:none;
+	margin-bottom:1em;
+}
+
+.page-content li.type-product {
+	img {
+		float:left;
+	}
+
+	@include span-columns(7 of 10);
+	@include clearfix;
+	margin-left:0;
+	h3 {
+		@include span-columns(3 of 7);
+		float:left;
+		text-transform:uppercase;
+	}
+	div.desc {
+		@include span-columns(3 of 7);
+		float:left;
+		display:block;
+	}
+	img {
+		@include span-columns(2 of 7);
+		float:left;
+	}
+
+
+}
+ul.products {
+	@include span-columns(9 of 10);
+	margin-left: ($column+$gutter)/2;
+	margin-top:1em;
+	margin-bottom:2em;
+}
+
+.page-content li.product-category {
+	@include span-columns(3 of 9);
+	position: relative;
+	padding:0px;
+	a { 
+	        display:block;
+		@include clearfix;
+		position:relative;
+		color:black;
+		}	
+	h3 {
+		color:white;
+		width:100%;
+		text-align:center;
+		text-transform:uppercase;
+		position:absolute;
+	}
+	mark.count {
+		display:none;
+	}
+	img {
+	}
+
+}

@@ -1357,9 +1357,17 @@ section.page-content:after {
   margin-right: 2.7027%;
   width: 79.45946%;
   margin-left: 10.27027%;
+  *zoom: 1;
 }
 .person-profile:last-child {
   margin-right: 0;
+}
+.person-profile:before, .person-profile:after {
+  content: " ";
+  display: table;
+}
+.person-profile:after {
+  clear: both;
 }
 .person-profile br {
   display: inline;
@@ -1421,6 +1429,10 @@ section.page-content:after {
 .pagination li {
   display: inline;
   margin: 0 0.5em;
+}
+
+.page-content form ul li {
+  background-image: none;
 }
 
 /******************************************************************************\
@@ -1739,7 +1751,7 @@ ul.footer-social img:hover {
 
 body {
   color: black;
-  background-image: url("/wp-content/themes/podtheme/images/body-bg-octapod.gif");
+  background-image: url("http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/body-bg-octapod.gif");
 }
 
 body.custom-background {
@@ -1800,7 +1812,7 @@ img {
   background-color: inherit;
   background-image: url("images/bullet.png");
   background-origin: padding-box;
-  background-position: 0 .5em;
+  background-position: 0 6px;
   background-repeat: no-repeat;
   background-size: auto auto;
   padding: 0 0 0px 17px;
@@ -1819,6 +1831,117 @@ div.home-box:before, div.home-box:after {
 }
 div.home-box:after {
   clear: both;
+}
+
+#sidebar {
+  display: none;
+}
+
+.page-content li.product {
+  background-image: none;
+  margin-bottom: 1em;
+}
+
+.page-content li.type-product {
+  float: left;
+  display: block;
+  margin-right: 2.7027%;
+  width: 69.18919%;
+  *zoom: 1;
+  margin-left: 0;
+}
+.page-content li.type-product img {
+  float: left;
+}
+.page-content li.type-product:last-child {
+  margin-right: 0;
+}
+.page-content li.type-product:before, .page-content li.type-product:after {
+  content: " ";
+  display: table;
+}
+.page-content li.type-product:after {
+  clear: both;
+}
+.page-content li.type-product h3 {
+  float: left;
+  display: block;
+  margin-right: 3.90625%;
+  width: 40.625%;
+  float: left;
+  text-transform: uppercase;
+}
+.page-content li.type-product h3:last-child {
+  margin-right: 0;
+}
+.page-content li.type-product div.desc {
+  float: left;
+  display: block;
+  margin-right: 3.90625%;
+  width: 40.625%;
+  float: left;
+  display: block;
+}
+.page-content li.type-product div.desc:last-child {
+  margin-right: 0;
+}
+.page-content li.type-product img {
+  float: left;
+  display: block;
+  margin-right: 3.90625%;
+  width: 25.78125%;
+  float: left;
+}
+.page-content li.type-product img:last-child {
+  margin-right: 0;
+}
+
+ul.products {
+  float: left;
+  display: block;
+  margin-right: 2.7027%;
+  width: 89.72973%;
+  margin-left: 38px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+ul.products:last-child {
+  margin-right: 0;
+}
+
+.page-content li.product-category {
+  float: left;
+  display: block;
+  margin-right: 3.01205%;
+  width: 31.3253%;
+  position: relative;
+  padding: 0px;
+}
+.page-content li.product-category:last-child {
+  margin-right: 0;
+}
+.page-content li.product-category a {
+  display: block;
+  *zoom: 1;
+  position: relative;
+  color: black;
+}
+.page-content li.product-category a:before, .page-content li.product-category a:after {
+  content: " ";
+  display: table;
+}
+.page-content li.product-category a:after {
+  clear: both;
+}
+.page-content li.product-category h3 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+}
+.page-content li.product-category mark.count {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
