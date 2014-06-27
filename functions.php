@@ -222,10 +222,25 @@ add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 //customise the category view
 //remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
 //add_action( 'woocommerce_after_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
-add_action( 'woocommerce_after_subcategory_title', 'my_add_cat_description', 12);
+
+add_action( 'woocommerce_after_subcategory_title', 'my_add_cat_description', 10);
+
+//remove_action( 'woocommerce_after_main_content', 'woocommerce_get_sidebar', 10);
+//add_action( 'woocommerce_before_main_content', 'woocommerce_get_sidebar', 10);
 function my_add_cat_description ($category) {
 	$cat_id=$category->term_id;
 	$prod_term=get_term($cat_id,'product_cat');
 	$description=$prod_term->description;
 	echo '<div class="shop_cat_desc">'.$description.'</div>';
 }
+//single product
+//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+//add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
+add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+function sb_woo_remove_reviews_tab($tabs) {
+
+	 unset($tabs['reviews']);
+
+	  return $tabs;
+}
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);

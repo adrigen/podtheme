@@ -95,15 +95,67 @@ img {
 	background-size: auto auto;
         padding: 0 0 0px 17px;
 						}
-
+input.button + input.button {
+	margin-left: 1em;
+}
+body {
+	input.button, button.button	{
+		margin: 2% 0;
+	}
+}
 //home only
 div.home-box {
 	@include outer-container;
 	background-color:#C6C5C5;
 }	
 //shop
-#sidebar {
+.page-title {
+	@extend .post-title;
+}
+nav.woocommerce-breadcrumb {
+	@extend .breadcrumb;
+}
+
+.woocommerce-result-count, .woocommerce-ordering {
 	display:none;
+}
+.widget.woocommerce {
+	margin-bottom:1em;
+}
+input.minus {
+	margin-bottom: .75em;
+}
+
+#sidebar {
+	@include span-columns(2 of 10);
+	li {
+		padding-left:0;
+		margin-left:0;
+		background-image:none;
+	}
+	a {
+		color: black;
+	}
+	
+	a.button {
+		margin-bottom:1em;
+		color:white;
+	}
+	h2 {
+		color:black;
+		text-align:left;
+	}
+	.attachment-shop_thumbnail {
+		display: none;
+	}
+	.widget {
+		color: black;
+	}
+
+}
+form + ul.products { //list of products in category
+	@include span-columns(8 of 10);
+	margin-bottom:2em;
 }
 .page-content li.product {
 
@@ -116,9 +168,9 @@ div.home-box {
 		float:left;
 	}
 
-	@include span-columns(7 of 10);
 	@include clearfix;
 	margin-left:0;
+	padding-left:0;
 	h3 {
 		@include span-columns(3 of 7);
 		float:left;
@@ -133,16 +185,31 @@ div.home-box {
 		@include span-columns(2 of 7);
 		float:left;
 	}
-
-
+	add_to_cart_button {
+		@include span-columns(1 of 7);
+	}
 }
-ul.products {
+div.term-description {
+	margin-bottom:1em;
+}
+#sidebar + ul.products { //CATEGORIES
 	@include span-columns(9 of 10);
 	margin-left: ($column+$gutter)/2;
 	margin-top:1em;
 	margin-bottom:2em;
 }
+.post-type-archive-product #sidebar {
+	display:none;
+}
+ul.product-categories > li {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+ul.product-categories li + li  {
 
+	border-top: none;
+	border-bottom: 1px solid black;
+}
 .page-content li.product-category {
 	@include span-columns(3 of 9);
 	position: relative;
@@ -165,5 +232,27 @@ ul.products {
 	}
 	img {
 	}
+}
+//single product
 
+div.summary {
+	@include span-columns(4 of 10);
+	@include omega();
+}
+div.images {
+
+	@include span-columns(4 of 10);
+}
+div.quantity {
+	width:6em;
+}	
+span.posted_in, .entry-content h2:first-child {
+	display:none;
+ }
+.entry-content {
+	padding: 1em 0;
+}
+.woocommerce-tabs {
+	@include span-columns(8 of 10);
+	@include shift(2);
 }
