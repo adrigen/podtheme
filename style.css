@@ -1949,6 +1949,10 @@ div.home-box:after {
   clear: both;
 }
 
+nav.woocommerce-breadcrumb {
+  margin-bottom: 1em;
+}
+
 .woocommerce-result-count, .woocommerce-ordering {
   display: none;
 }

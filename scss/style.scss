@@ -114,6 +114,7 @@ div.home-box {
 }
 nav.woocommerce-breadcrumb {
 	@extend .breadcrumb;
+	margin-bottom: 1em;
 }
 
 .woocommerce-result-count, .woocommerce-ordering {
