@@ -219,6 +219,12 @@ function my_theme_wrapper_end() {
 }
 //css  remove them all in one line
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+//fix breadcrumbs
+add_filter( 'woocommerce_breadcrumb_defaults', 'd_woo_breadcrumb_defaults');
+function d_woo_breadcrumb_defaults($defaults) {
+	$defaults['delimiter'] = '&nbsp;&raquo;&nbsp;'; //whatever delimiter you want
+	return $defaults;
+}
 //customise the category view
 //remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
 //add_action( 'woocommerce_after_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
