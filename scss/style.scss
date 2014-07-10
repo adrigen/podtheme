@@ -235,7 +235,6 @@ ul.product-categories li + li  {
 	}
 }
 //single product
-
 div.summary {
 	@include span-columns(4 of 10);
 	@include omega();
@@ -247,7 +246,7 @@ div.images {
 div.quantity {
 	width:6em;
 }	
-span.posted_in, .entry-content h2:first-child {
+span.posted_in, .entry-content h2:first-child, div.product_meta, a.added_to_cart {
 	display:none;
  }
 .entry-content {

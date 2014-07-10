@@ -2161,7 +2161,7 @@ div.quantity {
   width: 6em;
 }
 
-span.posted_in, .entry-content h2:first-child {
+span.posted_in, .entry-content h2:first-child, div.product_meta, a.added_to_cart {
   display: none;
 }
 

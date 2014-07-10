@@ -240,8 +240,8 @@ function my_add_cat_description ($category) {
 	echo '<div class="shop_cat_desc">'.$description.'</div>';
 }
 //single product
-//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-//add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
 add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
 function sb_woo_remove_reviews_tab($tabs) {
 
@@ -249,4 +249,12 @@ function sb_woo_remove_reviews_tab($tabs) {
 
 	  return $tabs;
 }
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+remove_action( 'woocommerce_after_single_product_summary', 
+	'woocommerce_output_related_products', 20);
+function wpa_123136_no_shipping( $needs_shipping, $product ){
+	  if( $product->get_shipping_class() == 'local-pickup-only' ){
+		      $needs_shipping = false;
+		        }
+	    return $needs_shipping;
+}
+add_filter('woocommerce_product_needs_shipping','wpa_123136_no_shipping', 10, 2 );
