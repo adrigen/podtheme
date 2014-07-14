@@ -398,7 +398,7 @@ button,
 input[type="submit"],
 a.button {
   -webkit-font-smoothing: antialiased;
-  background-color: #f7403a;
+  background-color: #b40100;
   border-radius: 20px;
   color: white;
   display: inline-block;
@@ -411,7 +411,7 @@ a.button {
 button:hover,
 input[type="submit"]:hover,
 a.button:hover {
-  background-color: #dc1009;
+  background-color: #ff0301;
   color: white;
 }
 
@@ -439,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25em;
-  color: #f7403a;
+  color: #b40100;
   text-transform: uppercase;
 }
 
@@ -471,14 +471,14 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #f7403a;
+  color: #b40100;
   text-decoration: none;
 }
 a:hover {
-  color: #dc1009;
+  color: #ff0301;
 }
 a:active, a:focus {
-  color: #dc1009;
+  color: #ff0301;
   outline: none;
 }
 
@@ -563,8 +563,8 @@ select[multiple=multiple]:hover {
 textarea:focus,
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 select[multiple=multiple]:focus {
-  border-color: #f7403a;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(246, 40, 33, 0.7);
+  border-color: #b40100;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(155, 1, 0, 0.7);
   outline: none;
 }
 
@@ -773,7 +773,7 @@ a.button {
 
 #searchsubmit, #submit {
   margin-top: 0.2em;
-  background-color: #f7403a;
+  background-color: #b40100;
   box-shadow: none;
 }
 
@@ -823,7 +823,7 @@ a.button {
 }
 
 .byuser .comment-author {
-  background-color: #f7403a;
+  background-color: #b40100;
   color: #222222;
 }
 .byuser .comment-author a {
@@ -932,9 +932,40 @@ div.hotlinks:after {
   display: block;
   margin-right: 2.24215%;
   width: 31.83857%;
+  padding: 0 20px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: .9;
+  text-shadow: black 0px 0px 16px;
 }
 .hotlink-single:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 912px) {
+  .hotlink-single {
+    height: 290px;
+  }
+}
+.hotlink-single .text-over-image-large {
+  font-size: 260%;
+}
+.hotlink-single .text-over-image-small {
+  font-size: 122%;
+}
+.hotlink-single p {
+  margin: 0;
+}
+.hotlink-single a {
+  color: white;
+  display: block;
+}
+.hotlink-single a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .main-menu {
@@ -945,7 +976,7 @@ div.hotlinks:after {
   white-space: nowrap;
 }
 .main-menu .menu-item a:hover {
-  color: #f7403a;
+  color: #ff0301;
 }
 
 header.navigation {
@@ -1008,7 +1039,7 @@ header.navigation .navigation-menu-button {
   }
 }
 header.navigation .navigation-menu-button:hover {
-  color: #f7403a;
+  color: #ff0301;
 }
 header.navigation .nav {
   z-index: 9999999;
@@ -1061,7 +1092,7 @@ header.navigation ul li a {
   color: white;
 }
 header.navigation ul li a:hover {
-  color: #f7403a;
+  color: #ff0301;
 }
 header.navigation .active-nav-item a {
   padding-bottom: 3px;
@@ -1155,7 +1186,7 @@ header.navigation a.sign-up {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline;
-  background: #f7403a;
+  background: #b40100;
   border-radius: 0.1875em;
   color: white;
   font-size: .8em;
@@ -1169,7 +1200,7 @@ header.navigation a.sign-up {
   }
 }
 header.navigation a.sign-up:hover {
-  background: #f9706b;
+  background: #e70100;
 }
 header.navigation .search-bar {
   padding: 13px 5px;
@@ -1318,7 +1349,7 @@ header.navigation .search-bar .search-and-submit button[type=submit] img {
   }
 }
 .accordion-tabs-minimal li.tab-header-and-content a.tab-link:hover, .page-content ul.tabs li a:hover {
-  color: #f7403a;
+  color: #b40100;
 }
 .accordion-tabs-minimal li.tab-header-and-content a.tab-link:focus, .page-content ul.tabs li a:focus {
   outline: none;
@@ -1412,7 +1443,7 @@ article:after {
 	Standard-page
 \******************************************************************************/
 .post-title, .archive-title, .search-title h1, .page-title {
-  border-bottom: 0.1em solid #f7403a;
+  border-bottom: 0.1em solid #b40100;
   text-align: left;
   margin-bottom: 0.2em;
 }
@@ -1715,7 +1746,7 @@ div.gallery:last-child {
 }
 
 .format-quote .date {
-  border-color: #f7403a;
+  border-color: #b40100;
 }
 
 .format-status .post-title, .format-status .archive-title, .format-status .search-title h1, .search-title .format-status h1, .format-status .page-title {
@@ -1739,6 +1770,9 @@ footer {
   margin-right: 2.24215%;
   width: 100%;
   float: left;
+}
+footer a {
+  color: #dddddd;
 }
 footer:before, footer:after {
   content: " ";
@@ -1828,9 +1862,6 @@ footer:last-child {
     margin-left: 0;
   }
 }
-.footer-widgets > li .menu li a {
-  color: #dddddd;
-}
 .footer-widgets > li .menu li li a {
   font-weight: normal;
   margin-left: 2em;
@@ -1871,12 +1902,12 @@ body.custom-background {
 }
 
 a {
-  color: #f7403a;
+  color: #b40100;
   text-decoration: none;
 }
 
 h1 a {
-  color: #f7403a;
+  color: #b40100;
 }
 
 img {

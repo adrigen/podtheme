@@ -1,6 +1,17 @@
 (function($) {
 
+$.fn.vAlign = function() {
+return this.each(function(i){
+var ah = $(this).height();
+var ph = $(this).parent().height();
+var mh = Math.ceil((ph-ah) / 2);
+$(this).css('padding-top', mh);
+});
+};
+
+
 $(document).ready(function() {
+$('a.text-over-image').vAlign();
 //top banner
   $('.flexslider').flexslider();
 

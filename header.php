@@ -120,11 +120,17 @@ $nav_menu = wp_nav_menu(
 
 	
 			<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'hotbutton' ); ?>
  
-	<div class="hotlink-single"><a href="<?php  $postid = $post->ID; echo get_post_meta($postid, 'link', true); ?>"><img src="<?php echo $image[0]; ?>" alt="" /></a></div>
-	
-	
+<div class="hotlink-single"
+style="background-image:url('<?php $postid = $post->ID; echo $image[0] ?>')" 
+>	
+	<a href="<?php  echo get_post_meta($postid, 'link', true); ?>" 
+	   class="text-over-image">
+            <p class="text-over-image-small"><?php  echo get_post_meta($postid, 'text_over_image_small', true); ?></p>
+	    <p class="text-over-image-large"><?php  echo get_post_meta($postid, 'text_over_image', true); ?></p>
+	</a>
+</div>
 
 	<?php endforeach;  wp_reset_postdata();?>
 

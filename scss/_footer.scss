@@ -1,4 +1,7 @@
 footer {
+	a {
+        	color:$light-gray;
+	}
 	background: $color1;
 	color: $light-gray;
         @include clearfix;
@@ -57,9 +60,6 @@ footer {
 		}
 	}
 	.menu li {
-		a {
-			color:$light-gray;
-		}
 		li a {
 		font-weight: normal;
 		margin-left: 2em;

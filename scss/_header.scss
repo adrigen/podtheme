@@ -59,4 +59,35 @@ div.hotlinks {
 }
 .hotlink-single {
 	@include span-columns(4 of 12);
+	@include media($large) {
+		height:290px;
+	}
+	padding: 0 $gutter;
+	position:relative;
+	text-transform: uppercase;
+	font-weight: bolder;
+	line-height: .9;
+	text-shadow: black 0px 0px 16px;
+	.text-over-image-large {
+	    font-size: 260%;
+        }
+	.text-over-image-small {
+	    font-size: 122%;
+        }
+	p {
+		margin:0;
+	}
+	a{
+	color:white;
+	display:block;
+	span {
+		position: absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+            }	
+        }
+
+
 }

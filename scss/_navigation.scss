@@ -11,7 +11,7 @@
 	}
 
 	.menu-item a:hover {
-		color: $color3;
+		color: lighten($base-accent-color, 15);
 	}
 
 }
@@ -20,7 +20,7 @@ header.navigation {
   $navigation-padding: 1em;
   $navigation-background: black;
   $navigation-color: white;
-  $navigation-color-hover: $color3;
+  $navigation-color-hover: lighten($base-accent-color, 15);
   $navigation-height: 60px;
   $navigation-nav-button-background: $base-accent-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10);

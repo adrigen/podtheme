@@ -1,7 +1,7 @@
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #f7403a;
+  background-color: #b40100;
   border-radius: 20px;
   color: white;
   display: inline-block;
@@ -13,7 +13,7 @@ input[type="submit"] {
 }
 button:hover,
 input[type="submit"]:hover {
-  background-color: #dc1009;
+  background-color: #ff0301;
   color: white;
 }
 
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25em;
-  color: #f7403a;
+  color: #b40100;
   text-transform: uppercase;
 }
 
@@ -73,14 +73,14 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #f7403a;
+  color: #b40100;
   text-decoration: none;
 }
 a:hover {
-  color: #dc1009;
+  color: #ff0301;
 }
 a:active, a:focus {
-  color: #dc1009;
+  color: #ff0301;
   outline: none;
 }
 
@@ -165,8 +165,8 @@ select[multiple=multiple]:hover {
 textarea:focus,
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 select[multiple=multiple]:focus {
-  border-color: #f7403a;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(246, 40, 33, 0.7);
+  border-color: #b40100;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(155, 1, 0, 0.7);
   outline: none;
 }
 
@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25em;
-  color: #f7403a;
+  color: #b40100;
   text-transform: uppercase;
 }
 
@@ -308,14 +308,14 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #f7403a;
+  color: #b40100;
   text-decoration: none;
 }
 a:hover {
-  color: #dc1009;
+  color: #ff0301;
 }
 a:active, a:focus {
-  color: #dc1009;
+  color: #ff0301;
   outline: none;
 }
 

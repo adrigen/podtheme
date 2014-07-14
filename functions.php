@@ -32,9 +32,10 @@ if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'post-thumbnails' );
 		        set_post_thumbnail_size( 135, 135, true );
 }
-update_option('thumbnail_size_w', 290);
-update_option('thumbnail_size_h', 290);
-update_option('thumbnail_crop', 1);
+//update_option('thumbnail_size_w', 290);
+//update_option('thumbnail_size_h', 290);
+//update_option('thumbnail_crop', 1);
+
 //test if were on a page or it's grandchildren
 function is_tree($pid)
 {
@@ -72,12 +73,14 @@ add_theme_support( 'automatic-feed-links' );
 //add_image_size( 'full-width', 912, 999 ); //300 pixels wide (and unlimited height)
 
 add_image_size( 'profile-image', 135, 135, true ); //300 pixels wide (and unlimited height)
+add_image_size( 'hotbutton', 290, 290, true ); 
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
 function my_custom_sizes( $sizes ) {
 	    return array_merge( $sizes, array(
 		            'profile-image' => __('profile image'),
+		            'hotbutton' => __('hotbutton size'),
 			        ) );
 }
 
