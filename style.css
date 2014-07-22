@@ -898,6 +898,7 @@ a.button {
   text-transform: uppercase;
   width: auto;
   height: 2em;
+  white-space: nowrap;
 }
 #ticker .slide {
   width: 100%;
@@ -932,6 +933,7 @@ div.hotlinks:after {
   display: block;
   margin-right: 2.24215%;
   width: 31.83857%;
+  height: 290px;
   padding: 0 20px;
   position: relative;
   text-transform: uppercase;
@@ -943,15 +945,39 @@ div.hotlinks:after {
   margin-right: 0;
 }
 @media screen and (min-width: 912px) {
-  .hotlink-single {
-    height: 290px;
+  .hotlink-single .text-over-image-large {
+    font-size: 260% !important;
+  }
+  .hotlink-single .text-over-image-small {
+    font-size: 122%;
   }
 }
 .hotlink-single .text-over-image-large {
-  font-size: 260%;
+  font-size: 200%;
 }
 .hotlink-single .text-over-image-small {
-  font-size: 122%;
+  font-size: 120%;
+}
+@media screen and (max-width: 640px) {
+  .hotlink-single .text-over-image-large {
+    font-size: 120%;
+  }
+  .hotlink-single .text-over-image-small {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hotlink-single {
+    width: 290px;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  .hotlink-single .text-over-image-large {
+    font-size: 260%;
+  }
+  .hotlink-single .text-over-image-small {
+    font-size: 120%;
+  }
 }
 .hotlink-single p {
   margin: 0;

@@ -45,6 +45,7 @@
 	text-transform: uppercase;
 	width: auto;
 	height:2em;
+	white-space:nowrap;
 	.slide {
 		width:100%;
 		margin:5px 11px;
@@ -59,21 +60,48 @@ div.hotlinks {
 }
 .hotlink-single {
 	@include span-columns(4 of 12);
-	@include media($large) {
-		height:290px;
-	}
+	height:290px;
 	padding: 0 $gutter;
 	position:relative;
 	text-transform: uppercase;
 	font-weight: bolder;
 	line-height: .9;
 	text-shadow: black 0px 0px 16px;
-	.text-over-image-large {
-	    font-size: 260%;
-        }
-	.text-over-image-small {
-	    font-size: 122%;
-        }
+	@include media($large) {
+		.text-over-image-large {
+	    		font-size: 260%!important;
+        	}
+		.text-over-image-small {
+	    		font-size: 122%;
+        	}
+        }	
+	//all others 
+		.text-over-image-large {
+	    		font-size: 200%;
+        	}
+		.text-over-image-small {
+	    		font-size: 120%;
+        	}
+	@include media($medium){
+		.text-over-image-large {
+	    		font-size: 120%;
+        	}
+		.text-over-image-small {
+	    		font-size: 80%;
+        	}
+	}
+	@include media($medium){
+		width:290px;
+		float:none!important;
+		margin: 0 auto!important;
+		.text-over-image-large {
+	    		font-size: 260%;
+        	}
+		.text-over-image-small {
+	    		font-size: 120%;
+        	}
+
+	}
 	p {
 		margin:0;
 	}

@@ -17,7 +17,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php wp_title( ); ?></title>
+		<title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
 		<meta name="viewport" content="width=device-width" />
 		<!--[if lt IE 9]>
 			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
@@ -79,9 +79,9 @@ $nav_menu = wp_nav_menu(
 	?>
 	
 			<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                    		<li><a href="<?php echo get_post_meta($post->ID, $key, true); ?>" title=""><img src="<?php echo $image[0]; ?>" alt="" /></a></li>
-	
+			<?php $thumbnail = get_post_thumbnail_id($post->ID); $image = wp_get_attachment_image_src(( $thumbnail ), 'single-post-thumbnail' ); $alt = get_post_meta($thumbnail, '_wp_attachment_image_alt', true);?>
+				<li><a href="<?php echo get_post_meta($post->ID, $key, true); ?>" title=""><img src="<?php echo $image[0]; ?>" alt="<?php echo $alt; ?>" /></a></li>
+
 			<?php endforeach;  wp_reset_postdata();?>
          
           		</ul>

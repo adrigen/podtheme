@@ -1,0 +1,65 @@
+.site-header {
+	overflow: hidden;
+	padding: 3em 0;
+	position:relative;
+	height: 300px;
+	border-bottom: 3px solid $color2;
+}
+
+.custom-header {
+	position: absolute;
+	top:0;
+}
+
+.logo {
+	//@include span-columns(3);
+	//@include shift(2);
+	color: $color2;
+	position: relative;
+	z-index: 2;
+
+	.blog-name {
+		margin-bottom: 0.2em;
+		text-align: center;
+		text-shadow: 0 0 .5em $color1;
+	}
+
+	.blog-description {
+		margin-bottom: 1.5em;
+		text-align: center;
+		font-style: italic;
+		text-shadow: 0 0 .5em $color1;
+	}
+}
+.subsite-header {
+	@include outer-container();
+	margin-left: auto;
+	margin-right: auto;
+	display:none;
+}
+//homepage
+#ticker {
+	background: none repeat scroll 0 0 #000000;
+	border-radius: 10px;
+	margin:3px 10px 10px 10px ;
+	text-transform: uppercase;
+	width: auto;
+	height:2em;
+	.slide {
+		width:100%;
+		margin:5px 11px;
+	}
+}	
+.slider {
+	@include clearfix;
+}
+div.hotlinks {
+	@include clearfix;
+	margin-bottom:3px;
+}
+.hotlink-single {
+	@include span-columns(4 of 12);
+	p { 
+		@extend h2;
+	}
+}
