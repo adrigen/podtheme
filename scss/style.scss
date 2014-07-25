@@ -126,7 +126,12 @@ nav.woocommerce-breadcrumb {
 input.minus {
 	margin-bottom: .75em;
 }
-
+.ginput_price {
+	display:none;
+}
+a .desc {
+	color:black;
+}
 #sidebar {
 	@include span-columns(2 of 10);
 	li {
@@ -173,21 +178,22 @@ form + ul.products { //list of products in category
 	margin-left:0;
 	padding-left:0;
 	h3 {
-		@include span-columns(3 of 7);
+		@include span-columns(4 of 8);
 		float:left;
 		text-transform:uppercase;
 	}
 	div.desc {
-		@include span-columns(3 of 7);
+		@include span-columns(4 of 8);
 		float:left;
 		display:block;
 	}
 	img {
-		@include span-columns(2 of 7);
+		@include span-columns(2 of 8);
 		float:left;
 	}
-	add_to_cart_button {
-		@include span-columns(1 of 7);
+	.add_to_cart_button {
+		@include span-columns(2 of 8);
+		text-align: center;
 	}
 }
 div.term-description {
@@ -206,6 +212,9 @@ ul.product-categories > li {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
+li.product-category img {
+		height:213px;
+	}
 ul.product-categories li + li  {
 
 	border-top: none;

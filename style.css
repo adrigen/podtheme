@@ -2022,6 +2022,14 @@ input.minus {
   margin-bottom: .75em;
 }
 
+.ginput_price {
+  display: none;
+}
+
+a .desc {
+  color: black;
+}
+
 #sidebar {
   float: left;
   display: block;
@@ -2088,8 +2096,8 @@ form + ul.products:last-child {
 .page-content li.type-product h3 {
   float: left;
   display: block;
-  margin-right: 3.90625%;
-  width: 40.625%;
+  margin-right: 3.40136%;
+  width: 48.29932%;
   float: left;
   text-transform: uppercase;
 }
@@ -2099,8 +2107,8 @@ form + ul.products:last-child {
 .page-content li.type-product div.desc {
   float: left;
   display: block;
-  margin-right: 3.90625%;
-  width: 40.625%;
+  margin-right: 3.40136%;
+  width: 48.29932%;
   float: left;
   display: block;
 }
@@ -2110,20 +2118,21 @@ form + ul.products:last-child {
 .page-content li.type-product img {
   float: left;
   display: block;
-  margin-right: 3.90625%;
-  width: 25.78125%;
+  margin-right: 3.40136%;
+  width: 22.44898%;
   float: left;
 }
 .page-content li.type-product img:last-child {
   margin-right: 0;
 }
-.page-content li.type-product add_to_cart_button {
+.page-content li.type-product .add_to_cart_button {
   float: left;
   display: block;
-  margin-right: 3.90625%;
-  width: 10.9375%;
+  margin-right: 3.40136%;
+  width: 22.44898%;
+  text-align: center;
 }
-.page-content li.type-product add_to_cart_button:last-child {
+.page-content li.type-product .add_to_cart_button:last-child {
   margin-right: 0;
 }
 
@@ -2151,6 +2160,10 @@ div.term-description {
 ul.product-categories > li {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+li.product-category img {
+  height: 213px;
 }
 
 ul.product-categories li + li {

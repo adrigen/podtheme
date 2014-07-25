@@ -74,6 +74,7 @@ add_theme_support( 'automatic-feed-links' );
 
 add_image_size( 'profile-image', 135, 135, true ); //300 pixels wide (and unlimited height)
 add_image_size( 'hotbutton', 290, 290, true ); 
+add_image_size( 'top-banner', 912, 308, true ); 
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 

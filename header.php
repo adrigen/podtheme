@@ -27,8 +27,8 @@
 	<body <?php body_class(); ?>>
 <header class="navigation">
   <div class="menu-wrapper">
-    <a href="http://octapod.org" class="logo">
-      <img src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/logo.png" href="<?php echo home_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" title="">
+  <a href="<?php echo home_url(); ?>" class="logo">
+      <img src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" title="">
     </a>
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
@@ -80,7 +80,7 @@ $nav_menu = wp_nav_menu(
 	
 			<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 			<?php $thumbnail = get_post_thumbnail_id($post->ID); $image = wp_get_attachment_image_src(( $thumbnail ), 'single-post-thumbnail' ); $alt = get_post_meta($thumbnail, '_wp_attachment_image_alt', true);?>
-				<li><a href="<?php echo get_post_meta($post->ID, $key, true); ?>" title=""><img src="<?php echo $image[0]; ?>" alt="<?php echo $alt; ?>" /></a></li>
+	<li><a href="<?php echo get_post_meta($post->ID, $key, true); ?>" title=""><?php echo get_the_post_thumbnail( $post->ID, 'top-banner'); ?></li>
 
 			<?php endforeach;  wp_reset_postdata();?>
          
