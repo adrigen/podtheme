@@ -262,3 +262,18 @@ function wpa_123136_no_shipping( $needs_shipping, $product ){
 	    return $needs_shipping;
 }
 add_filter('woocommerce_product_needs_shipping','wpa_123136_no_shipping', 10, 2 );
+//bsb label on bacs
+function wpse_77783_woo_bacs_ibn($translation, $text, $domain) {
+    if ($domain == 'woocommerce') {
+        switch ($text) {
+            case 'Sort Code':
+                $translation = 'BSB';
+                break;
+ 
+        }
+    }
+ 
+    return $translation;
+}
+ 
+add_filter('gettext', 'wpse_77783_woo_bacs_ibn', 10, 3);
