@@ -23,6 +23,10 @@ function is_child($pageID) {
 if ( is_page('tina')) {
 	add_action( 'wp_enqueue_scripts', 'tina_load_css' );
 }
+*/
+
+include 'meta.php';
+
 
 /******************************************************************************\
 	Theme support, standard settings, menus and widgets
@@ -54,6 +58,44 @@ function is_tree($pid)
 				        }
 };
 
+function get_subsite_styles($this_page, $post){
+    $checkbox = get_post_custom_values('subsite_checkbox', $this_page);
+    $color = get_post_custom_values('subsite_color', $this_page);
+    $logo = get_post_custom_values('subsite_imgadv', $this_page);
+    $bg = get_post_custom_values('subsite_bg', $this_page);
+    if ($checkbox[0] == 1) {
+        return array("check" => $checkbox[0], "color" => $color[0], "logo" => $logo[0], "bg" => $bg[0]);
+    }
+    elseif ($post->post_parent > 0) {
+        return get_subsite_styles($post->post_parent, '0');
+    }
+    else {
+        return false;
+}
+}
+
+//test if we're on a subsite, or it's children
+
+//build submenus for pages or their children
+// Generate page tree
+function subsite_page_tree($this_page) {
+	$pagelist = '';
+	if( !$this_page->post_parent ) {
+		$children = wp_list_pages('title_li=&child_of='.$this_page->ID.'&echo=0');
+		if( $children ) {
+			$pagelist .= '<ul id="sub-nav">' . $children . '</ul>';
+		}
+	}
+	elseif( $this_page->ancestors ) {
+		// get the top ID of this page. Page ids DESC so top level ID is the last one
+		$ancestor = end( get_post_ancestors($this_page) );
+		//$pagelist .= wp_list_pages('title_li=&include='.$ancestor.'&echo=0');
+		//$pagelist = str_replace('</li>', '', $pagelist);
+		$pagelist .= '<ul id="sub-nav">' . wp_list_pages('title_li=&child_of='.$ancestor.'&echo=0') .'</ul></li>';
+	}
+	return $pagelist;
+}
+
 add_action( 'template_redirect', 'singe_post_css' );
 
 function singe_post_css() {
@@ -63,14 +105,20 @@ function singe_post_css() {
 	} else if ( is_tree(55)) {//if it's podspace or granchild
 		wp_enqueue_style('podspace-css', get_stylesheet_directory_uri() . '/podspace.css',false,0.1,'screen');
 	}
+        $subsite_styles = get_subsite_styles(get_the_ID(), $post);
+	if ($subsite_styles['check'] == 1){
+		wp_enqueue_style('subsite', get_stylesheet_directory_uri() . '/subsite.css',false,0.1,'screen');
+	}
 }
+
+
 add_theme_support( 'post-formats', array( 'image', 'quote', 'status', 'link' ) );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
 
 
-//add_image_size( 'full-width', 912, 999 ); //300 pixels wide (and unlimited height)
+add_image_size( 'full-bg', 1440, 900, true ); //fullscreen 
 
 add_image_size( 'profile-image', 135, 135, true ); //300 pixels wide (and unlimited height)
 add_image_size( 'hotbutton', 290, 290, true ); 

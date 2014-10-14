@@ -25,6 +25,17 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+
+<?php $subsite_styles = get_subsite_styles(get_the_ID(), $post);
+ if ($subsite_styles['bg']) {
+$attr = array(
+	'id'	=> "bg",
+
+);
+    echo wp_get_attachment_image($subsite_styles['bg'], 'full-bg', 0, $attr);
+    }
+ ?>
+
 <header class="navigation">
   <div class="menu-wrapper">
   <a href="<?php echo home_url(); ?>" class="logo">
@@ -146,7 +157,18 @@ style="background-image:url('<?php $postid = $post->ID; echo $image[0] ?>')"
 		<?php } ?>
 
 
+
+
 <div class="subsite-header">
+<?php 
+ if ($subsite_styles['logo']) {
+    echo wp_get_attachment_image($subsite_styles['logo']);
+    }
+ ?>
+  <?php 
+if( function_exists( 'subsite_page_tree') && subsite_page_tree($post) != '' ) :?>
+<?php echo subsite_page_tree($post);?>
+<?php endif;?>
 <?php
 
 if ( is_tree(170)) { //is it tina or grandchild?

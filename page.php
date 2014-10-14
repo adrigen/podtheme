@@ -9,6 +9,23 @@
 
 get_header(); ?>
 
+<!-- get all meta values for page -->
+<?php
+$subsite_styles = get_subsite_styles(get_the_ID(), $post);
+?>
+
+<!-- override colors with subsite parent's -->
+<STYLE TYPE="text/css" MEDIA=screen>
+
+  a  { color: <?php echo $subsite_styles['color'];?> }
+body #sub-nav {
+border-bottom: 4px solid <?php echo $subsite_styles['color'];?>;
+}
+h1 {
+color: <?php echo $subsite_styles['color'];?>;
+}
+</STYLE>
+
 
 
 		<!-- featured Image For page -->
@@ -18,13 +35,13 @@ get_header(); ?>
 		
 	<!-- Finish featured Image For page -->
 
-
 	<section class="page-content primary" role="main">
 <?php if(function_exists('simple_breadcrumb')) {simple_breadcrumb();} ?>
 
 		<?php
 			if ( have_posts() ) : the_post();
-
+				
+			        
 				get_template_part( 'loop' ); ?>
 
 				<aside class="post-aside"><?php

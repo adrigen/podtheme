@@ -108,6 +108,21 @@ div.home-box {
 	@include outer-container;
 	background-color:#C6C5C5;
 }	
+//pages
+.alignleft .longdesc { //hide long desc button
+    display:none;
+    }
+img.alignleft {
+	margin-right: $gutter;
+}
+img.alignright {
+	margin-left: $gutter;
+}
+img.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 //shop
 .page-title {
 	@extend .post-title;
@@ -133,29 +148,32 @@ a .desc {
 	color:black;
 }
 #sidebar {
-	@include span-columns(2 of 10);
-	li {
-		padding-left:0;
-		margin-left:0;
-		background-image:none;
-	}
-	a {
-		color: black;
-	}
-	
-	a.button {
-		margin-bottom:1em;
-		color:white;
-	}
-	h2 {
-		color:black;
-		text-align:left;
-	}
-	.attachment-shop_thumbnail {
-		display: none;
-	}
-	.widget {
-		color: black;
+	display:none;
+	@include media($large){
+		@include span-columns(2 of 10);
+		li {
+			padding-left:0;
+			margin-left:0;
+			background-image:none;
+		}
+		a {
+			color: black;
+		}
+		
+		a.button {
+			margin-bottom:1em;
+			color:white;
+		}
+		h2 {
+			color:black;
+			text-align:left;
+		}
+		.attachment-shop_thumbnail {
+			display: none;
+		}
+		.widget {
+			color: black;
+		}
 	}
 
 }
@@ -170,34 +188,51 @@ form + ul.products { //list of products in category
 }
 
 .page-content li.type-product {
-	img {
-		float:left;
-	}
-
+        
 	@include clearfix;
 	margin-left:0;
 	padding-left:0;
+	margin-bottom:3em;
 	h3 {
-		@include span-columns(4 of 8);
-		float:left;
 		text-transform:uppercase;
 	}
+	span.product_more {
+		text-decoration: underline;
+		color: $color3;
+	}
 	div.desc {
-		@include span-columns(4 of 8);
-		float:left;
-		display:block;
+		margin-bottom:1em;
 	}
-	img {
-		@include span-columns(2 of 8);
-		float:left;
-	}
-	.add_to_cart_button {
-		@include span-columns(2 of 8);
-		text-align: center;
+	@include media($large) {
+		h3 {
+			@include span-columns(4 of 8);
+			float:left;
+		}
+		div.desc {
+			@include span-columns(4 of 8);
+			float:left;
+			display:block;
+		}
+		img {
+			@include span-columns(2 of 8);
+			float:left;
+		}
+		.add_to_cart_button {
+			@include span-columns(2 of 8);
+			text-align: center;
+		}
 	}
 }
 div.term-description {
 	margin-bottom:1em;
+}
+#place_order {
+	float:right;
+	margin-top:3em;
+}
+.terms > * { float: right; }
+#payment .terms { 
+	float: left; 
 }
 #sidebar + ul.products { //CATEGORIES
 	@include span-columns(9 of 10);
@@ -221,26 +256,30 @@ ul.product-categories li + li  {
 	border-bottom: 1px solid black;
 }
 .page-content li.product-category {
-	@include span-columns(3 of 9);
-	position: relative;
-	padding:0px;
+	@include media($large) {
+		@include span-columns(3 of 9);
+		position: relative;
+		padding:0px;
+		text-align:center;
+		h3 {
+			width:100%;
+			text-transform:uppercase;
+			position:absolute;
+			color:white;
+		}
+		.shop_cat_desc {
+		}
+	}
+	margin-bottom: 3em;
+
 	a { 
-	        display:block;
+		display:block;
 		@include clearfix;
 		position:relative;
 		color:black;
-		}	
-	h3 {
-		color:white;
-		width:100%;
-		text-align:center;
-		text-transform:uppercase;
-		position:absolute;
-	}
+	}	
 	mark.count {
 		display:none;
-	}
-	img {
 	}
 }
 //single product
@@ -265,3 +304,19 @@ span.posted_in, .entry-content h2:first-child, div.product_meta, a.added_to_cart
 	@include span-columns(8 of 10);
 	@include shift(2);
 }
+.shop_table {
+	font-size: .75em;
+	.product-thumbnail, .product-price {
+		display:none;
+	}
+	@include media($large){
+		font-size: 1em;
+		.product-thumbnail, .product-price {
+			display:table-cell;
+		}
+	}
+}
+//gallery
+div.gallery {
+    float:none!important;
+    }

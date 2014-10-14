@@ -56,7 +56,8 @@ module.exports = function(grunt) {
 				files: {
 					'../style.css': ['../scss/style.scss'],
 					'../tina.css': ['../scss/tina.scss'],
-					'../podspace.css': ['../scss/podspace.scss']
+					'../podspace.css': ['../scss/podspace.scss'],
+					'../subsite.css': ['../scss/subsite.scss']
 				}
 			},
 			prod: {
@@ -66,7 +67,8 @@ module.exports = function(grunt) {
 				files: {
 					'../style.css': ['../scss/style.scss'],
 					'../tina.css': ['../scss/tina.scss'],
-					'../podspace.css': ['../scss/podspace.scss']
+					'../podspace.css': ['../scss/podspace.scss'],
+					'../subsite.css': ['../scss/subsite.scss']
 				}
 
 			},

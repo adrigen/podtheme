@@ -122,9 +122,13 @@ fieldset {
 input,
 label,
 select {
-  display: block;
+  display: inline;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
+}
+
+#shipping_country_field strong {
+  margin-left: 1em;
 }
 
 label {

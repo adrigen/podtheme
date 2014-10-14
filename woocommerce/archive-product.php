@@ -30,6 +30,7 @@ get_header( 'shop' ); ?>
 		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
+WTF
 	<?php
 		/**
 		 * woocommerce_sidebar hook

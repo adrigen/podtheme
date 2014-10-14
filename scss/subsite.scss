@@ -1,0 +1,70 @@
+//what
+
+@import "vendor/bourbon/bourbon";
+@import 'base/grid-settings';
+@import "vendor/neat/neat";
+
+
+//some styles are set inline, 
+body {
+.site {
+	position:relative;
+	.feature-image-for-page {
+		display: none;
+
+	}
+	.page-content a {
+		text-decoration:underline;
+	}
+}
+
+#bg { 
+	position: fixed; 
+        top: 0; 
+        left: 0; 
+        z-index:-20;}
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+.subsite-header {
+	display:block;
+	padding-top: 2em;
+	background-color: #FFFFFF;
+	margin-bottom:4em;
+	.attachment-thumbnail {
+	    @include shift(1);
+        }
+}
+.post-title {
+	    border: none;
+    }
+#sub-nav {
+	@include span-columns(10 of 12);
+	@include shift(1);
+	border-bottom:4px solid black;
+	padding-bottom:1em;
+	margin-bottom:2em;
+	a {
+		text-decoration:none;
+	}
+	li {
+		//margin: 1em 0;
+		margin-right:1em;
+		display:inline;
+		list-style-type: none;
+	}
+		li {
+			background-image:none;
+			padding-left: 0;
+		}
+
+}
+}
+#sub-nav li.menu-item-has-children:hover ul.sub-menu {
+	display: block;
+}
+
+.page-logo {
+	margin-bottom: 1em;
+	@include shift(1);
+}
+
