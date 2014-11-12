@@ -162,14 +162,17 @@ style="background-image:url('<?php $postid = $post->ID; echo $image[0] ?>')"
 <div class="subsite-header">
 <?php 
  if ($subsite_styles['logo']) {
-    echo wp_get_attachment_image($subsite_styles['logo']);
+    echo wp_get_attachment_image($subsite_styles['logo'], 'id');
     }
  ?>
   <?php 
-if( function_exists( 'subsite_page_tree') && subsite_page_tree($post) != '' ) :?>
-<?php echo subsite_page_tree($post);?>
-<?php endif;?>
+ if ($subsite_styles['check']) {
+	if( function_exists( 'subsite_page_tree') && subsite_page_tree($subsite_styles['subsiteId']) != '' ) :?>
+         
+	<?php echo subsite_page_tree($subsite_styles['subsiteId']);?>
+	<?php endif;?>
 <?php
+}
 
 if ( is_tree(170)) { //is it tina or grandchild?
 	
@@ -193,7 +196,7 @@ wp_nav_menu( $defaults );
 ?>
                 </div>
 <?php
-} else if ( is_tree(55)){ //is it podspace or grandchild?
+} else if ( is_tree(999)){ //is it podspace or grandchild?(55)
 ?>
 
 <a href="podspace/"><img class="page-logo" src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/podspace-logo.gif" alt="PODspace" /</a>
@@ -218,7 +221,7 @@ wp_nav_menu( $defaults );
 
 <?php
 
-if ( is_tree(55)) { //is it podspace or grandchild?
+if ( is_tree(999)) { //is it podspace or grandchild?55
 	
 ?>
                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>

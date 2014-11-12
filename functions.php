@@ -1,4 +1,5 @@
 <?php
+
 /**
  * podtheme functions file
  *
@@ -63,8 +64,9 @@ function get_subsite_styles($this_page, $post){
     $color = get_post_custom_values('subsite_color', $this_page);
     $logo = get_post_custom_values('subsite_imgadv', $this_page);
     $bg = get_post_custom_values('subsite_bg', $this_page);
+    $subsite_id = $this_page; 
     if ($checkbox[0] == 1) {
-        return array("check" => $checkbox[0], "color" => $color[0], "logo" => $logo[0], "bg" => $bg[0]);
+        return array("check" => $checkbox[0], "color" => $color[0], "logo" => $logo[0], "bg" => $bg[0],"subsiteId" => $subsite_id);
     }
     elseif ($post->post_parent > 0) {
         return get_subsite_styles($post->post_parent, '0');
@@ -73,26 +75,17 @@ function get_subsite_styles($this_page, $post){
         return false;
 }
 }
-
 //test if we're on a subsite, or it's children
 
 //build submenus for pages or their children
 // Generate page tree
 function subsite_page_tree($this_page) {
 	$pagelist = '';
-	if( !$this_page->post_parent ) {
-		$children = wp_list_pages('title_li=&child_of='.$this_page->ID.'&echo=0');
+	//if( !$this_page->post_parent ) {
+		$children = wp_list_pages('title_li=&child_of='.$this_page.'&echo=0');
 		if( $children ) {
 			$pagelist .= '<ul id="sub-nav">' . $children . '</ul>';
 		}
-	}
-	elseif( $this_page->ancestors ) {
-		// get the top ID of this page. Page ids DESC so top level ID is the last one
-		$ancestor = end( get_post_ancestors($this_page) );
-		//$pagelist .= wp_list_pages('title_li=&include='.$ancestor.'&echo=0');
-		//$pagelist = str_replace('</li>', '', $pagelist);
-		$pagelist .= '<ul id="sub-nav">' . wp_list_pages('title_li=&child_of='.$ancestor.'&echo=0') .'</ul></li>';
-	}
 	return $pagelist;
 }
 
@@ -102,7 +95,7 @@ function singe_post_css() {
 	global $post; 
 	if ( is_tree(170)) { //if it's tina or grandchild
 		wp_enqueue_style('tina-css', get_stylesheet_directory_uri() . '/tina.css',false,0.1,'screen');
-	} else if ( is_tree(55)) {//if it's podspace or granchild
+	} else if ( is_tree(999)) {//if it's podspace or granchild55
 		wp_enqueue_style('podspace-css', get_stylesheet_directory_uri() . '/podspace.css',false,0.1,'screen');
 	}
         $subsite_styles = get_subsite_styles(get_the_ID(), $post);

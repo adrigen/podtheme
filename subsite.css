@@ -67,7 +67,7 @@ body #sub-nav li {
   display: block;
 }
 
-.page-logo {
+.page-logo, .subsite-header img {
   margin-bottom: 1em;
   margin-left: 8.52018%;
 }

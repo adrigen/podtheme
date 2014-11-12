@@ -70,6 +70,7 @@ function subsite_register_meta_boxes( $meta_boxes )
 				'name'             => __( 'Logo', 'meta-box' ),
 				'id'               => "{$prefix}imgadv",
 				'type'             => 'image_advanced',
+				//'desc'  => __( 'Max width 290px.', 'meta-box' ), 
 				'max_file_uploads' => 1,
 			),
 			array(
