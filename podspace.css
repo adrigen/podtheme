@@ -4,24 +4,24 @@
   box-sizing: border-box;
 }
 
-.page-id-55 section.page-content {
+.subsite-home section.page-content {
   margin-top: 4em;
 }
 @media screen and (min-width: 912px) {
-  .page-id-55 section.page-content {
+  .subsite-home section.page-content {
     float: left;
     display: block;
     margin-right: 2.7027%;
     width: 58.91892%;
   }
-  .page-id-55 section.page-content:last-child {
+  .subsite-home section.page-content:last-child {
     margin-right: 0;
   }
 }
-.page-id-55 .post-title {
+.subsite-home .post-title {
   display: none;
 }
-.page-id-55 .site .feature-image-for-page.podspace {
+.subsite-home .site .feature-image-for-page.podspace {
   left: 0;
   top: 0;
   z-index: 0;
@@ -32,11 +32,11 @@
   position: absolute;
   margin-top: 2em;
 }
-.page-id-55 section {
+.subsite-home section {
   background: black;
   padding: 1em;
 }
-.page-id-55 section p, .page-id-55 section .post-meta, .page-id-55 section a, .page-id-55 section .breadcrumb {
+.subsite-home section p, .subsite-home section .post-meta, .subsite-home section a, .subsite-home section .breadcrumb {
   color: white !important;
 }
 

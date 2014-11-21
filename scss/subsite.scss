@@ -1,11 +1,11 @@
-//what
 
 @import "vendor/bourbon/bourbon";
 @import 'base/grid-settings';
 @import "vendor/neat/neat";
 
 
-//some styles are set inline, 
+//some styles are set inline, like the colour 
+
 body {
 .site {
 	position:relative;
@@ -17,19 +17,10 @@ body {
 		text-decoration:underline;
 	}
 }
-
-#bg { 
-	position: fixed; 
-        top: 0; 
-        left: 0; 
-        z-index:-20;}
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
 .subsite-header {
 	display:block;
 	padding-top: 2em;
 	background-color: #FFFFFF;
-	margin-bottom:4em;
 	.attachment-thumbnail {
 	    @include shift(1);
         }
@@ -67,4 +58,36 @@ body {
 	margin-bottom: 1em;
 	@include shift(1);
 }
-
+//bg for parent
+	.site .subsite-parent-bg {
+	left: 0;
+	top: 0;
+	z-index:-1;
+        //min-height: 100%;
+	    	
+	      /* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+	display:block;
+	position:absolute;
+	}
+	section.subsite-text.page-content.primary { 
+		@include media($large){
+	       		 @include span-columns(6 of 10);	
+		}
+		background:black;
+		padding:1em;
+		p, .post-meta, a, .breadcrumb {
+			color:white!important;
+		}
+		.post-title {
+			display:none;
+		}
+		h1,h2,h3,h4,h5,h6,.post-content, cite {
+			color:white;
+		}
+		.comments {
+			color: black;
+		}
+		
+	}

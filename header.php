@@ -26,16 +26,6 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-<?php $subsite_styles = get_subsite_styles(get_the_ID(), $post);
- if ($subsite_styles['bg']) {
-$attr = array(
-	'id'	=> "bg",
-
-);
-    echo wp_get_attachment_image($subsite_styles['bg'], 'full-bg', 0, $attr);
-    }
- ?>
-
 <header class="navigation">
   <div class="menu-wrapper">
   <a href="<?php echo home_url(); ?>" class="logo">
@@ -160,6 +150,7 @@ style="background-image:url('<?php $postid = $post->ID; echo $image[0] ?>')"
 
 
 <div class="subsite-header">
+<?php $subsite_styles = get_subsite_styles(get_the_ID(), $post); ?>
 <?php 
  if ($subsite_styles['logo']) {
     echo wp_get_attachment_image($subsite_styles['logo'], 'id');
@@ -196,28 +187,18 @@ wp_nav_menu( $defaults );
 ?>
                 </div>
 <?php
-} else if ( is_tree(999)){ //is it podspace or grandchild?(55)
-?>
-
-<a href="podspace/"><img class="page-logo" src="http://octapod.org/wordpress-2013/wp-content/themes/podtheme/images/podspace-logo.gif" alt="PODspace" /</a>
-            	<div id="sub-nav">
-                	
-<?php
-$defaults = array(
-		'menu'            => 'podaspace',
-		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
-		'items_wrap'      => '<ul>%3$s</ul>',
-		);
-wp_nav_menu( $defaults );
-
-?>
-</div>
-<?php
-}
-?>
-</div><!--end subsite-header-->
+	}?> </div><!--end subsite-header-->
 <div class="site">
+
+<?php if ($subsite_styles['bg'] && $subsite_styles['subsiteId']==get_the_id()) { 
+$attr = array(
+	'id'	=> "subsitebg",
+	'class'	=> "subsite-parent-bg",
+
+);
+    echo wp_get_attachment_image($subsite_styles['bg'], 'full-bg', 0, $attr);
+    }
+ ?>
 
 <?php
 

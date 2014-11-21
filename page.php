@@ -24,6 +24,9 @@ border-bottom: 4px solid <?php echo $subsite_styles['color'];?>;
 h1 {
 color: <?php echo $subsite_styles['color'];?>;
 }
+div.site section.subsite-text.page-content.primary, .subsite-text fieldset {
+background-color: <?php echo $subsite_styles['color'];?>;
+}
 </STYLE>
 
 
@@ -35,7 +38,13 @@ color: <?php echo $subsite_styles['color'];?>;
 		
 	<!-- Finish featured Image For page -->
 
-	<section class="page-content primary" role="main">
+<?php 
+if ($subsite_styles['subsiteId'] == get_the_id()) {
+	$home = 'subsite-text'; 
+}
+?>
+
+	<section class="page-content primary <?php echo $home; ?>" role="main">
 <?php if(function_exists('simple_breadcrumb')) {simple_breadcrumb();} ?>
 
 		<?php

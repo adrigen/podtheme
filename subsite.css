@@ -13,23 +13,10 @@ body .site .feature-image-for-page {
 body .site .page-content a {
   text-decoration: underline;
 }
-body #bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -20;
-}
-body .bgwidth {
-  width: 100%;
-}
-body .bgheight {
-  height: 100%;
-}
 body .subsite-header {
   display: block;
   padding-top: 2em;
   background-color: #FFFFFF;
-  margin-bottom: 4em;
 }
 body .subsite-header .attachment-thumbnail {
   margin-left: 8.52018%;
@@ -70,6 +57,45 @@ body #sub-nav li {
 .page-logo, .subsite-header img {
   margin-bottom: 1em;
   margin-left: 8.52018%;
+}
+
+.site .subsite-parent-bg {
+  left: 0;
+  top: 0;
+  z-index: -1;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+section.subsite-text.page-content.primary {
+  background: black;
+  padding: 1em;
+}
+@media screen and (min-width: 912px) {
+  section.subsite-text.page-content.primary {
+    float: left;
+    display: block;
+    margin-right: 2.7027%;
+    width: 58.91892%;
+  }
+  section.subsite-text.page-content.primary:last-child {
+    margin-right: 0;
+  }
+}
+section.subsite-text.page-content.primary p, section.subsite-text.page-content.primary .post-meta, section.subsite-text.page-content.primary a, section.subsite-text.page-content.primary .breadcrumb {
+  color: white !important;
+}
+section.subsite-text.page-content.primary .post-title {
+  display: none;
+}
+section.subsite-text.page-content.primary h1, section.subsite-text.page-content.primary h2, section.subsite-text.page-content.primary h3, section.subsite-text.page-content.primary h4, section.subsite-text.page-content.primary h5, section.subsite-text.page-content.primary h6, section.subsite-text.page-content.primary .post-content, section.subsite-text.page-content.primary cite {
+  color: white;
+}
+section.subsite-text.page-content.primary .comments {
+  color: black;
 }
 
 /*# sourceMappingURL=subsite.css.map */

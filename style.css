@@ -1952,6 +1952,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
+  position: relative;
+  z-index: 1;
 }
 .site:before, .site:after {
   content: " ";
@@ -2320,6 +2322,10 @@ span.posted_in, .entry-content h2:first-child, div.product_meta, a.added_to_cart
 
 div.gallery {
   float: none !important;
+}
+
+footer {
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

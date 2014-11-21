@@ -95,10 +95,7 @@ function singe_post_css() {
 	global $post; 
 	if ( is_tree(170)) { //if it's tina or grandchild
 		wp_enqueue_style('tina-css', get_stylesheet_directory_uri() . '/tina.css',false,0.1,'screen');
-	} else if ( is_tree(999)) {//if it's podspace or granchild55
-		wp_enqueue_style('podspace-css', get_stylesheet_directory_uri() . '/podspace.css',false,0.1,'screen');
-	}
-        $subsite_styles = get_subsite_styles(get_the_ID(), $post);
+	}         $subsite_styles = get_subsite_styles(get_the_ID(), $post);
 	if ($subsite_styles['check'] == 1){
 		wp_enqueue_style('subsite', get_stylesheet_directory_uri() . '/subsite.css',false,0.1,'screen');
 	}
